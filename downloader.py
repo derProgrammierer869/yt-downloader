@@ -9,9 +9,8 @@ def download():
     yt = YouTube(link)
     yn = input('Download' + yt.title + '? (y/n)')
     if yn == 'y':
-        yt.set_filename(yt.title)
-        mp4files = yt.filter('mp4')
-        d_video = yt.get(mp4files[-1].extension,mp4files[-1].resolution)
+        #yt.set_filename(yt.title)  --download the repo https://github.com/NFicano/pytube
+        d_video = yt.streams.first()
         d_video.download(path)
         
     elif yn == 'n':
@@ -30,3 +29,5 @@ def check_path():
 check_path()
 
 # Link: https://www.youtube.com/watch?v=rDMAT1a5bPM&t=227s
+
+#make download progress bar
