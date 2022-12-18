@@ -9,9 +9,8 @@ def download():
     yt = YouTube(link)
     yn = input('Download ' + yt.title + '? (y/n)')
     if yn == 'y':
-        #yt.set_filename(yt.title)  --download the repo https://github.com/NFicano/pytube
-        d_video = yt.streams.first()
-        d_video.download(path)
+        yt.streams.get_highest_resolution().download(path)
+        
         
     elif yn == 'n':
         print('Download cancelled.')
