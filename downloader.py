@@ -10,7 +10,7 @@ def download():
     yn = input('Download ' + yt.title + '? (y/n)')
     if yn == 'y':
         yt.streams.get_highest_resolution().download(path)
-        
+        print("Download complete! \n File located in " + path +".")
         
     elif yn == 'n':
         print('Download cancelled.')
