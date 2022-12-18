@@ -7,7 +7,7 @@ path = r'C:\Users\Yello\Desktop\YT_Download'
 def download():
     link = input("Please enter the URL of the video:")
     yt = YouTube(link)
-    yn = input('Download' + yt.title + '? (y/n)')
+    yn = input('Download ' + yt.title + '? (y/n)')
     if yn == 'y':
         #yt.set_filename(yt.title)  --download the repo https://github.com/NFicano/pytube
         d_video = yt.streams.first()
