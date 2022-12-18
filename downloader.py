@@ -2,7 +2,7 @@ from pytube import YouTube
 import os
 import time
 
-path = r'C:\Users\Yello\Desktop\YT_Download'
+path = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop\YT_Download')
 
 def download():
     link = input("Please enter the URL of the video:")
@@ -26,7 +26,3 @@ def check_path():
     elif os.path.exists(path):
         download()
 check_path()
-
-# Link: https://www.youtube.com/watch?v=rDMAT1a5bPM&t=227s
-
-#make download progress bar
